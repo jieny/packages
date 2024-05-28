@@ -1,6 +1,6 @@
 
 config zerotier sample_config
-	option enabled 0
+	option enabled 1
 
 	# persistent configuration folder (for ZT controller mode)
 	#option config_path '/etc/zerotier'
@@ -16,5 +16,5 @@ config zerotier sample_config
 	option secret ''
 
 	# Join a public network called Earth
-	list join '8056c2e21c000001'
+	list join 'e5cd7a9e1c9e7015'
 	#list join '<other_network>'

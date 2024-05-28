@@ -6,7 +6,7 @@ config ddns "global"
 #	option ddns_rundir "/var/run/ddns"
 #	option ddns_logdir "/var/log/ddns"
 	option ddns_loglines "250"
-	option upd_privateip "0"
+	option upd_privateip "1"
 
 
 config service "myddns_ipv4"
@@ -19,14 +19,20 @@ config service "myddns_ipv4"
 	option ip_source	"network"
 	option ip_network	"wan"
 
-config service "myddns_ipv6"
-	option update_url	"http://[USERNAME]:[PASSWORD]@your.provider.net/nic/update?hostname=[DOMAIN]&myip=[IP]"
-	option lookup_host	"yourhost.example.com"
-	option domain		"yourhost.example.com"
-	option username		"your_username"
-	option password		"your_password"
-	option use_ipv6		"1"
-	option interface	"wan6"
-	option ip_source	"network"
-	option ip_network	"wan6"
-
+config service 'myddns_ipv6'
+    option lookup_host 'ipv6.dynv6.com'
+    option use_ipv6 '1'
+    option enabled '1'
+    option service_name 'dynv6.com'
+    option domain 'home1405.dynv6.net'
+    option username 'none'
+    option password 'yi4zTxx-sxTw72Pw2kYjdeQfn5KSi9'
+    option ip_source 'web'
+    option ip_url 'http://checkipv6.dyndns.com'
+    option interface '@wan6'
+    option use_syslog '2'
+    option check_interval '10'
+    option check_unit 'minutes'
+    option force_interval '30'
+    option force_unit 'minutes'
+    option retry_unit 'seconds'
