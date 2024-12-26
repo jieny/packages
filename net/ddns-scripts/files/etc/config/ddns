@@ -22,7 +22,7 @@ config service "myddns_ipv4"
 config service 'myddns_ipv6'
     option lookup_host 'ipv6.dynv6.com'
     option use_ipv6 '1'
-    option enabled '1'
+    option enabled '0'
     option service_name 'dynv6.com'
     option domain 'home1405.dynv6.net'
     option username 'none'
